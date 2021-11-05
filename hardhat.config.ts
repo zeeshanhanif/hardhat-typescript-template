@@ -14,6 +14,7 @@ const INFURA_KEY = process.env.INFURA_KEY;
 // Be aware of NEVER putting real Ether into testing accounts
 const ROPSTEN_PRIVATE_KEY = process.env.ROPSTEN_PRIVATE_KEY;
 const RINKEBY_PRIVATE_KEY = process.env.RINKEBY_PRIVATE_KEY;
+const KOVAN_PRIVATE_KEY = process.env.KOVAN_PRIVATE_KEY;
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -41,6 +42,10 @@ export default {
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
       accounts: [`0x${RINKEBY_PRIVATE_KEY}`]
+    },
+    kovan: {
+      url: `https://kovan.infura.io/v3/${INFURA_KEY}`,
+      accounts: [`0x${KOVAN_PRIVATE_KEY}`]
     }
   }
 };

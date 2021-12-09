@@ -37,6 +37,9 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 export default {
   solidity: "0.8.4",
   networks: {
+    localhost: {
+      url: "http://127.0.0.1:8545"
+    },
     ropsten: {
       url: `https://ropsten.infura.io/v3/${INFURA_KEY}`,
       accounts: [`0x${ROPSTEN_PRIVATE_KEY}`]
